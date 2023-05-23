@@ -19,5 +19,11 @@
                     Type == "Foreign" ||
                     Type == "Military");
         }
+
+        public int GetTollFee()
+        {
+            if (this.TollFee >= 60) return 60;
+            return this.TollFee;
+        }
     }
 }
