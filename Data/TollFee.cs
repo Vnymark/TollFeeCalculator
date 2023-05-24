@@ -35,8 +35,8 @@ namespace TollFeeCalculator
         }
 
         public Boolean IsSameInterval(DateTime date) {
-            long diffInMillies = date.Millisecond - this.IntervalStart.Millisecond;
-            long minutes = diffInMillies/1000/60;
+            double diffInMillies = (date - this.IntervalStart).TotalMilliseconds;
+            double minutes = diffInMillies/1000/60;
             return (minutes <= 60);
         }
     }
