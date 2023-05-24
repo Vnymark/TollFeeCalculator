@@ -20,7 +20,7 @@ namespace TollFeeCalculator
             else if (hour == 6 && minute >= 30 && minute <= 59) return 16;
             else if (hour == 7 && minute >= 0 && minute <= 59) return 22;
             else if (hour == 8 && minute >= 0 && minute <= 29) return 16;
-            else if (hour >= 8 && hour <= 14 && minute >= 30 && minute <= 59) return 9;
+            else if ((hour == 8 && minute >= 30 || hour > 8) && (hour == 14 && minute <= 59 || hour < 14)) return 9;
             else if (hour == 15 && minute >= 0 && minute <= 29) return 16;
             else if (hour == 15 && minute >= 0 || hour == 16 && minute <= 59) return 22;
             else if (hour == 17 && minute >= 0 && minute <= 59) return 16;
