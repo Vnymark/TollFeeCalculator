@@ -20,6 +20,9 @@ public class TollCalculator
 
         DateTime intervalStart = dates[0];
 
+        /* If it's July - No fee should be payed */
+        if (intervalStart.Month == 7) return 0;
+
         /* If it's a weekend - No fee should be payed */
         if (intervalStart.DayOfWeek.ToString() == "Saturday" || intervalStart.DayOfWeek.ToString() == "Sunday") return 0;
 
