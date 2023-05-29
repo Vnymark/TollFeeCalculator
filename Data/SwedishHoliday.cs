@@ -7,7 +7,7 @@ public class SwedishHoliday {
     const string CalendarId = "sv.swedish.official#holiday@group.v.calendar.google.com";
     const string ApiKey = "AIzaSyAVJ9F2THkFwKLw5NpQX_v8dkg7aMOd40U";
 
-    public List<Google.Apis.Calendar.v3.Data.Event>? Holidays { get; set;}
+    private List<Google.Apis.Calendar.v3.Data.Event>? Holidays { get; set;}
 
     public SwedishHoliday() {
         FetchHolidays().Wait();
